@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Decoder Ring</string>
+    <string name="plaintext">plaintext</string>
+    <string name="ciphertext">ciphertext</string>
+</resources>
