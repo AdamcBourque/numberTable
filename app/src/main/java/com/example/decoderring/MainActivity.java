@@ -1,9 +1,7 @@
 package com.example.decoderring;
 
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             maxVal =0;
         }
         TableLayout table = findViewById(R.id.table);
-
+        table.removeAllViews();
         for (int i = minVal; i<=maxVal; i++){
             TableRow newRow = new TableRow(this);
             TextView n = new TextView(this);
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             TextView n3 = new TextView(this);
             setTextView(n3, "" + (i*i*i) ,padding);
             TextView _2n = new TextView(this);
-            setTextView(_2n, "" + (i^(1/2)) ,padding);
+            setTextView(_2n, "" + (Math.sqrt(i)) ,padding);
             TextView nfact = new TextView(this);
             int temp = 1;
             for (int j = 1; j <= i; j++){
@@ -57,16 +55,16 @@ public class MainActivity extends AppCompatActivity {
             setTextView(nfact, "" + temp ,padding);
             table.addView(newRow);
             newRow.addView(n);
-            if (square.isChecked() == true){
+            if (square.isChecked()){
                 newRow.addView(n2);
             }
-            if (cube.isChecked() == true){
+            if (cube.isChecked()){
                 newRow.addView(n3);
             }
-            if (sqrt.isChecked() == true){
+            if (sqrt.isChecked()){
                 newRow.addView(_2n);
             }
-            if (fact.isChecked() == true){
+            if (fact.isChecked()){
                 newRow.addView(nfact);
             }
         }

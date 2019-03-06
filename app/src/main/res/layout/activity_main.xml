@@ -24,11 +24,12 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/big_text"
             android:id="@+id/min"
-            android:text="MIN"
+            android:hint="MIN"
             android:textAlignment="center"
             android:inputType="number|none"
             android:layout_gravity="center"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/big_text"
             android:id="@+id/max"
-            android:text="MAX"
+            android:hint="MAX"
             android:textAlignment="center"
             android:inputType="number|none"
             android:layout_gravity="center"
@@ -60,41 +61,44 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/table">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"><TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/table_text"
+            android:text="Columns: n\u00b2"/>
+        <CheckBox
+            android:id="@+id/square"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/table_text"
+            android:text=" n\u00b3"/>
+        <CheckBox
+            android:id="@+id/cube"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/table_text"
+            android:text=" \u221an"/>
+        <CheckBox
+            android:id="@+id/sqrt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/table_text"
+            android:text=" n!"/>
+        <CheckBox
+            android:id="@+id/factorial"/>
+    </TableRow>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/table"
+            >
 
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/table_text"
-                android:text="Columns: n\u00b2"/>
-            <CheckBox
-                android:id="@+id/square"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/table_text"
-                android:text=" n\u00b3"/>
-            <CheckBox
-                android:id="@+id/cube"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/table_text"
-                android:text=" \u221an"/>
-            <CheckBox
-                android:id="@+id/sqrt"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/table_text"
-                android:text=" n!"/>
-            <CheckBox
-                android:id="@+id/factorial"/>
-        </TableRow>
-
+        </TableLayout>
     </TableLayout>
 </HorizontalScrollView>
 

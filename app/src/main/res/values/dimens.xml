@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="passing">15dp</dimen>
+    <dimen name="passing">25dp</dimen>
     <dimen name="big_text">18sp</dimen>
     <dimen name="table_text">14sp</dimen>
 </resources>
