@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             TextView _2n = new TextView(this);
             setTextView(_2n, "" + (Math.sqrt(i)) ,padding);
             TextView nfact = new TextView(this);
-            int temp = 1;
+            long temp = 1;
             for (int j = 1; j <= i; j++){
                 temp*=j;
             }
